@@ -15,7 +15,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
-          go-version-file: go.mod
+          # Always build with the latest supported Go release so standard
+          # library security fixes are picked up (go.mod sets the minimum).
+          go-version: stable
       - name: Format and vet
         run: make lint
       - name: Unit tests with race detector

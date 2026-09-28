@@ -1,5 +1,5 @@
 # Build a static binary with the Go FIPS 140-3 cryptographic module compiled in.
-FROM golang:1.24 AS build
+FROM golang:1.26 AS build
 WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download
