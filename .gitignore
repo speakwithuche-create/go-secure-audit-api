@@ -1,0 +1,6 @@
+bin/
+*.pem
+*.key
+*.crt
+.env
+coverage.out
